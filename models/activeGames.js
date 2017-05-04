@@ -4,8 +4,8 @@ var activeGamesschema = new mongoose.Schema({
     gameName: String,
     lat: Number,
     long: Number,
-    start: Number,
-    end: Number,
+    start: String,
+    end: String,
     cap: Number,
     ownerId: Number
 });

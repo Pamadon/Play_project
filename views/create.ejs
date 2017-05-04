@@ -1,0 +1,29 @@
+<form action="/create" method="POST">
+  <legend>Create Game</legend>
+  <select name="game_choice" id="game_choice">
+  <option value="chess">Chess</option>
+  <option value="backgammon">Backgammon</option>
+  <option value="checkers">Checkers</option>
+  <option value="ginrummy">GinRummy</option>
+  </select>
+  <label>Select start-time</label>
+  <input type="time" name="start_time" id="start_time">
+   <input type="number" name="lat" id="lat">
+   <input type="number" step="any" name="long" id="long">
+  <input type="submit" id="createGame" name="createGame">
+
+
+  </form>
+<p id="test"></p>
+ <div class="col-md-12" id="map"></div>
+
+
+
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q-cEwrHFGbExNjr_UYbTT3MMKm0pRFs
+&callback=initMap">
+    </script>
+
+
+<script src="/js/map.js"></script>
+

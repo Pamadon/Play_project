@@ -9,9 +9,13 @@ var isLoggedIn = require('./middleware/isLoggedIn');
 var morgan = require('morgan');
 var app = express();
 var mongoose = require('mongoose');
+var User = require('./models/user');
+
+
+
 mongoose.connect('mongodb://localhost/playGame');
 
-
+app.use(express.static('public'));
 app.use(require('morgan')('dev'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,16 +33,23 @@ app.use(function(req, res, next) {
     res.locals.currentUser = req.user;
     next();
 });
-
 app.get('/', function(req, res) {
     res.render('index');
 });
 
+
 app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('profile');
+    var id = req.user.id;
+    console.log(id);
+    User.findById(id, function(error, user) {
+        res.render('profile', { user: user });
+    });
+
 });
 
 app.use('/login', require('./controllers/login'));
 app.use('/signup', require('./controllers/signup'));
+app.use('/create', require('./controllers/create'));
+app.use('/find', require('./controllers/find'));
 
 app.listen(3000);
