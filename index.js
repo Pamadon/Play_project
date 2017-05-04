@@ -13,7 +13,7 @@ var User = require('./models/user');
 
 
 
-mongoose.connect('mongodb://localhost/playGame');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/playGame');
 
 app.use(express.static('public'));
 app.use(require('morgan')('dev'));
@@ -52,4 +52,4 @@ app.use('/signup', require('./controllers/signup'));
 app.use('/create', require('./controllers/create'));
 app.use('/find', require('./controllers/find'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
