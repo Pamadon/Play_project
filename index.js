@@ -13,7 +13,7 @@ var User = require('./models/user');
 
 
 
-mongoose.connect(process.env.MONGODB_ROSE_URI || 'mongodb://localhost/playGame');
+mongoose.connect(process.env.MONGOLAB_ROSE_URI || 'mongodb://localhost/playGame');
 
 app.use(express.static('public'));
 app.use(require('morgan')('dev'));
