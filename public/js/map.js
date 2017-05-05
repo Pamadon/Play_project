@@ -17,18 +17,19 @@
      function addMarker(location, map) {
          // Add the marker at the clicked location, and add the next-available label
          // from the array of alphabetical characters.
-         var marker = new google.maps.Marker({
+         var marker = new google.maps.Marker
+({
              position: location,
-             map: map,
+             map: map
          });
 
 
          var pin_lat = location.lat();
          var pin_long = location.lng();
-         //var myTextArea1 = document.getElementById('lat');
+         var myTextArea1 = document.getElementById('lat');
          var myTextArea = document.getElementById('long');
          myTextArea.setAttribute('value', pin_long);
-         //myTextArea1.setAttribute('value', pin_lat);
+         myTextArea1.setAttribute('value', pin_lat);
 
          console.log(pin_long);
          console.log(pin_lat);

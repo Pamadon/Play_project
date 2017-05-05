@@ -1,1 +1,19 @@
-createGame.ejs
+<div class='container'>
+<div class='col-sm-6 col-sm-offset-3'>
+ <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+<form action="/createGame" method="POST">
+	<legend>Create Game</legend>
+
+		<label for="gamename">Game name</label>
+		<input type="text" id="game_name" name="game_name" placeholder="new game">
+
+<hr>
+
+		<label for="player cap">Player Cap</label>
+		<input type="integer" id="player_cap" name="playerCap" placeholder="Player Cap">
+
+<hr>
+
+	<button type="submit">Create Game</button>
+</form>

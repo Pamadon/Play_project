@@ -1,10 +1,11 @@
 <form action="/create" method="POST">
   <legend>Create Game</legend>
-  <select name="game_choice" id="game_choice">
-  <option value="chess">Chess</option>
-  <option value="backgammon">Backgammon</option>
-  <option value="checkers">Checkers</option>
-  <option value="ginrummy">GinRummy</option>
+  <select name="game_Name" id="game_choice">
+    <% games.forEach(function(game) { %>
+      <option value="<%= game.gameName %>">
+        <%= game.gameName %>
+      </option>
+    <% }) %>
   </select>
   <label>Select start-time</label>
   <input type="time" name="start_time" id="start_time">
@@ -14,7 +15,7 @@
 
 
   </form>
-<p id="test"></p>
+
  <div class="col-md-12" id="map"></div>
 
 

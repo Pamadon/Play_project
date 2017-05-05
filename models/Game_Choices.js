@@ -5,7 +5,7 @@ var Game_ChoicesSchema = new mongoose.Schema({
     cap: Number,
 });
 
-var Game_Choices = mongoose.model('user', Game_ChoicesSchema);
+var Game_Choices = mongoose.model('Game_Choices', Game_ChoicesSchema);
 
 
 module.exports = Game_Choices;

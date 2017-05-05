@@ -4,17 +4,23 @@ var passport = require('../config/passportConfig');
 var User = require('../models/user');
 var activeGame = require('../models/activeGames');
 var isLoggedIn = require('../middleware/isLoggedIn');
-
+var games = require('../models/Game_Choices');
 
 router.get('/', function(req, res) {
-    res.render('create');
+
+    games.find({}, function(error, games) {
+        console.log(games);
+        res.render('create', { games: games });
+    });
+
 });
+
 
 
 router.post('/', isLoggedIn, function(req, res, next) {
     var newGame = new activeGame({
 
-        gameName: req.body.game_choice,
+        gameName: req.body.gameName,
         start: req.body.start_time,
         end: req.body.end_time,
         lat: req.body.lat,
@@ -27,7 +33,7 @@ router.post('/', isLoggedIn, function(req, res, next) {
             res.redirect('/login');
 
         }
-        console.log(savedUser);
+        res.redirect('activeGame/:id');
     });
 });
 
