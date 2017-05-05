@@ -6,7 +6,7 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 
 
 router.get('/', isLoggedIn, function(req, res) {
-    ActiveGames.find({}, function(error, places) {
+    User.find({}, function(error, places) {
 
         res.render('find', { places: places });
     });
