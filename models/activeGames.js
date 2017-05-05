@@ -25,8 +25,7 @@ activeGamesschema.set('toJSON', {
             long: ret.long,
             game_time: ret.game_time
 
-        };
-        console.log(returnJson);
+        }
         return returnJson;
 
     }
