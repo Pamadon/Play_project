@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 router.post('/', isLoggedIn, function(req, res, next) {
     var newGame = new Game_Choices({
 
-        gameName: req.body.game_Name,
+        gameName: req.body.game_name,
         cap: req.body.playerCap
     });
 
