@@ -31,7 +31,7 @@ var initMap = function() {
         // Bind a popup to the marker
         googleMarker.addListener('click', function() {
             var infoWindow = new google.maps.InfoWindow({
-                content: '<a href=https://challengemenow.herokuapp.com/activeGame/' + marker._id + '>1</a>'
+                content: '<a href=https://challengemenow.herokuapp.com/activeGame/' + marker.gameName + '>1</a>'
             });
             infoWindow.open(map, googleMarker);
             googleMarker.addListener('click', function() {
