@@ -27,7 +27,7 @@ var initMap = function() {
             map: map
 
         });
-        console.log(googleMarker.title);
+
         // Bind a popup to the marker
         googleMarker.addListener('click', function() {
             var infoWindow = new google.maps.InfoWindow({

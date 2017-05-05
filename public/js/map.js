@@ -30,8 +30,7 @@
          myTextArea.setAttribute('value', pin_long);
          myTextArea1.setAttribute('value', pin_lat);
 
-         console.log(pin_long);
-         console.log(pin_lat);
+
      }
 
 
@@ -45,7 +44,7 @@
                  lat: position.coords.latitude,
                  lng: position.coords.longitude
              };
-             console.log(pos);
+
              infoWindow.setPosition(pos);
              infoWindow.setContent('You are here!');
              infoWindow.open(map);
