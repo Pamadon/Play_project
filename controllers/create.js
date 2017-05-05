@@ -33,7 +33,7 @@ router.post('/', isLoggedIn, function(req, res, next) {
             res.redirect('/login');
 
         }
-        res.redirect('activeGame/:id');
+        res.redirect('activeGame/' + req.user._id);
     });
 });
 

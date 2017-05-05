@@ -2,9 +2,10 @@ var mongoose = require('mongoose');
 
 var PlayersSchema = new mongoose.Schema({
     game_id: { type: mongoose.Schema.Types.ObjectId, ref: "Game_Choices" },
-    userid: {
+    user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+     ref: "User"
+
     },
 
 });

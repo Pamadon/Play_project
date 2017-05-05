@@ -1,7 +1,8 @@
 
 <div class="col-md-12" id="map"></div>
-
-
+<%places.forEach(function(places) {%>
+<%= places.gameName%>
+<% });%>
 
  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q-cEwrHFGbExNjr_UYbTT3MMKm0pRFs
@@ -9,4 +10,8 @@
     </script>
 
 
-<script src="/js/map.js"></script>
+<script src="/js/map_find.js"></script>
+
+<script>
+  var markers = <%- JSON.stringify(places) %>;
+</script>

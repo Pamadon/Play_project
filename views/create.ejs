@@ -1,8 +1,8 @@
 <form action="/create" method="POST">
   <legend>Create Game</legend>
-  <select name="game_Name" id="game_choice">
+  <select name="gameName" id="game_choice">
     <% games.forEach(function(game) { %>
-      <option value="<%= game.gameName %>">
+      <option value="<%= game._id %>">
         <%= game.gameName %>
       </option>
     <% }) %>
@@ -25,6 +25,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q-cEwrHFGbExNjr_UYbTT3MMKm0pRFs
 &callback=initMap">
     </script>
+
 
 
 

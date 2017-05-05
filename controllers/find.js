@@ -5,9 +5,11 @@ var ActiveGames = require('../models/activeGames');
 var isLoggedIn = require('../middleware/isLoggedIn');
 
 
-
 router.get('/', isLoggedIn, function(req, res) {
-    res.render('find');
+    ActiveGames.find({}, function(error, places) {
+
+        res.render('find', { places: places });
+    });
 });
 
 

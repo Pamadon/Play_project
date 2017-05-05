@@ -14,6 +14,7 @@ var activeGamesschema = new mongoose.Schema({
     game_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Game_Choices"
+
     },
 
 });
@@ -25,7 +26,7 @@ activeGamesschema.set('toJSON', {
             long: ret.long,
             game_time: ret.game_time
 
-        }
+        };
         return returnJson;
 
     }
