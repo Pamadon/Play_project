@@ -1,4 +1,8 @@
 /* globals google, markers */
+
+
+
+
 var initMap = function() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 42.397, lng: -122.644 },
@@ -16,17 +20,18 @@ var initMap = function() {
     }
     // for each marker passed through, add it to the map with a popup
     markers.forEach(function(marker) {
-        console.log(marker);
-        var position = new google.maps.LatLng(marker.lat, marker.lng);
+        var position = new google.maps.LatLng(marker.lat, marker.long);
         var googleMarker = new google.maps.Marker({
             position: position,
-            title: marker.name,
+            title: marker.gameName,
             map: map
+
         });
+        console.log(googleMarker.title);
         // Bind a popup to the marker
         googleMarker.addListener('click', function() {
             var infoWindow = new google.maps.InfoWindow({
-                content: '<h3>' + marker.name + '</h3>'
+                content: '<a href=https://challengemenow.herokuapp.com/activeGame/' + marker.name + '>1</a>'
             });
             infoWindow.open(map, googleMarker);
             googleMarker.addListener('click', function() {
