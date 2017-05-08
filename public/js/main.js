@@ -183,7 +183,7 @@ $(function() {
         // Compute hash code
         var hash = 7;
         for (var i = 0; i < username.length; i++) {
-            hash = username.charCodeAt(i) + (hash < 5) - hash;
+            hash = username.charCodeAt(i) + (hash << 5) - hash;
         }
         // Calculate color
         var index = Math.abs(hash % COLORS.length);
@@ -192,14 +192,12 @@ $(function() {
 
     // Keyboard events
 
-
-
     $window.keydown(function(event) {
-
+        // Auto-focus the current input when a key is typed
         if (!(event.ctrlKey || event.metaKey || event.altKey)) {
             $currentInput.focus();
         }
-
+        // When the client hits ENTER on their keyboard
         if (event.which === 13) {
             if (username) {
                 sendMessage();
