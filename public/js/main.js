@@ -183,7 +183,7 @@ $(function() {
         // Compute hash code
         var hash = 7;
         for (var i = 0; i < username.length; i++) {
-            hash = username.charCodeAt(i) + (hash << 5) - hash;
+            hash = username.charCodeAt(i) + (hash < 5) - hash;
         }
         // Calculate color
         var index = Math.abs(hash % COLORS.length);
@@ -215,14 +215,14 @@ $(function() {
         updateTyping();
     });
 
+    // Click events
 
-
-
+    // Focus input when clicking anywhere on login page
     $loginPage.click(function() {
         $currentInput.focus();
     });
 
-
+    // Focus input when clicking on the message input's border
     $inputMessage.click(function() {
         $inputMessage.focus();
     });
