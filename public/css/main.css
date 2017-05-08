@@ -13,3 +13,11 @@
 #long {
     display: none;
 }
+
+.space {
+    margin-top: 40px
+}
+
+.chatArea {
+    height: 400px;
+}

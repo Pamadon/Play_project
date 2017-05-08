@@ -1,12 +1,12 @@
 <div class='container'>
 <div class='col-sm-6 col-sm-offset-3'>
- <h1><span class="fa fa-sign-in"></span> Login</h1>
+
 
 <form action="/createGame" method="POST">
 	<legend>Create Game</legend>
-
-		<label for="gamename">Game name</label>
-		<input type="text" id="game_name" name="game_name" placeholder="new game">
+<div class="form-group">
+		<label for="gamename" ">Game name</label>
+		<input type="text" class="form-group" id="game_name" name="game_name" placeholder="new game">
 
 <hr>
 
@@ -14,6 +14,6 @@
 		<input type="integer" id="player_cap" name="playerCap" placeholder="Player Cap">
 
 <hr>
-
-	<button type="submit">Create Game</button>
+</div>
+	<button type="submit" class="btn btn-lg btn-success">Create Game</button>
 </form>
