@@ -5,3 +5,11 @@
 .half-screen {
     height: 230px;
 }
+
+#lat {
+    display: none;
+}
+
+#long {
+    display: none;
+}

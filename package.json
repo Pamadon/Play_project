@@ -19,6 +19,7 @@
     "express-ejs-layouts": "^2.3.0",
     "express-session": "^1.15.2",
     "geocoder": "^0.2.3",
+    "materialize-css": "^0.98.2",
     "mongoose": "^4.9.7",
     "mongoose-socket.io": "^1.1.1",
     "morgan": "^1.8.1",
