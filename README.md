@@ -35,3 +35,6 @@ Things still to do:
 
 - I wanted to get the multi-room feature to work...Without this feature the site works as a place for me to say where i will be and what game i will be playing.
 - I wanted to remove the already made points as the goal was not to remove them but to store them in a played games database. The state change i tried to implement was not succesful in making the pins invisible.
+
+
+Link to live project: https://challengemenow.herokuapp.com/
