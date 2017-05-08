@@ -1,23 +1,32 @@
-#map {
-    height: 400px;
-}
-
-.half-screen {
-    height: 230px;
-}
-
-#lat {
-    display: none;
-}
-
-#long {
-    display: none;
-}
-
-.space {
-    margin-top: 40px
-}
-
-.chatArea {
-    height: 400px;
-}
+    #map {
+        height: 400px;
+    }
+    
+    .half-screen {
+        height: 230px;
+    }
+    
+    #lat {
+        display: none;
+    }
+    
+    #long {
+        display: none;
+    }
+    
+    .space {
+        margin-top: 40px
+    }
+    
+    .chatArea {
+        height: 400px;
+    }
+    
+    p {
+        color: black;
+        font-size: 20px
+    }
+    
+    .container {
+        height: 100%;
+    }
